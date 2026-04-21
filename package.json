@@ -1,0 +1,16 @@
+{
+  "name": "velog-github-sync",
+  "version": "1.0.0",
+  "description": "Sync Velog posts to GitHub repository",
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync.js",
+    "test": "node scripts/sync.js --dry-run"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
