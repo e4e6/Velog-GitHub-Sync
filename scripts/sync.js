@@ -209,7 +209,10 @@ async function main() {
     isNew ? created++ : updated++;
   }
 
-  meta.lastSync = new Date().toISOString();
+  const hasChanges = created > 0 || updated > 0 || deleted > 0;
+  if (hasChanges) {
+    meta.lastSync = new Date().toISOString();
+  }
   saveMeta(meta);
 
   console.log(
